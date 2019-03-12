@@ -1,0 +1,23 @@
+{
+  "name": "@evio/cpm",
+  "version": "1.0.0",
+  "description": "The cli of cpm",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cevio/cpm-cli"
+  },
+  "bin": {
+    "cpm": "index.js"
+  },
+  "keywords": [
+    "cli",
+    "cpm",
+    "npm"
+  ],
+  "author": "cevio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cevio/cpm-cli/issues"
+  },
+  "homepage": "https://github.com/cevio/cpm-cli/issues#readme"
+}

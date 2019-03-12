@@ -1,13 +1,33 @@
-# @html5/cpm
+# @evio/cpm
 
-china package manager
+🚀 A Lightweight NPM Private Active Management Service.We don't design a scheme to synchronize to local caching. We only focus on building private active CRUDs that are compatible with NPM public package downloads. https://cevio.github.io/cpm/
 
 ## Install
 
 ```shell
-npm i @html5/cpm -g --registry=http://npm.mzftech.cn
+npm i @evio/cpm -g
 ```
 
-## Publish
+## Add your own registry
 
-only scopes of `@html5` and `@node` can been published. user can upload by scope of '@{user account}'.
+```bash
+$ cpm host http://npm.mzftech.cn # your registry url
+```
+
+## Usage
+
+see [github: cpm registry](https://github.com/cevio/cpm#readme).
+
+```bash
+$ cpm i webpack -D
+$ cpm i vue
+$ cpm i @cevio/cli -g
+$ cpm i @scope/package
+# ...
+```
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2018-present, evio shen.
