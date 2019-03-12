@@ -9,10 +9,10 @@ let closing = 0, timer = null;
 (() => {
   if (!argv.length) return;
   if (argv[0] === 'host') {
-    HOST(argv[1]);
+    HOST(argv[1], true);
     return process.exit(0);
   }
-  const registry = HOST();
+  const registry = HOST(null, false);
   argv.push('--registry=' + registry);
   listen();
   const ls = require('child_process').spawn(process.platform === 'win32' ? 'npm.cmd' : 'npm', argv, { 
@@ -29,14 +29,14 @@ let closing = 0, timer = null;
   });
 })();
 
-function HOST(registry) {
+function HOST(registry, log) {
   if (registry) {
     fs.writeFileSync(hostFile, registry, 'utf8');
     return console.log(`\n 🍡 change registry to '${registry}'\n`);
   }
   if (!fs.existsSync(hostFile)) return console.log(`\n 💀 sorry non-registry\n`);
   registry = fs.readFileSync(hostFile, 'utf8');
-  console.log(registry);
+  log && console.log(registry);
   return registry;
 }
 
