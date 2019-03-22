@@ -59,7 +59,7 @@ function listen() {
 }
 
 function destory() {
-  process.off('SIGINT', close);
-  process.off('SIGQUIT', close);
-  process.off('SIGTERM', close);
+  process.removeListener('SIGINT', close);
+  process.removeListener('SIGQUIT', close);
+  process.removeListener('SIGTERM', close);
 }
