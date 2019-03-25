@@ -1,6 +1,6 @@
 {
-  "name": "@evio/cpm",
-  "version": "1.0.1",
+  "name": "@pdabc/cpm",
+  "version": "1.0.4",
   "description": "The cli of cpm",
   "repository": {
     "type": "git",
