@@ -1,6 +1,6 @@
 {
   "name": "@pdabc/cpm",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "The cli of cpm",
   "repository": {
     "type": "git",
